@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Crypt;
 class FrogotPassword extends Controller
 {
     public function forgot_password(){
-        return view('frontend.page.forgot_password');
+        return view('frontend.page.forgot_password')
     }
     public function forgot_password_send($phone_no){
         $phone_check = User::where(['phone_no'=>$phone_no])->count();
